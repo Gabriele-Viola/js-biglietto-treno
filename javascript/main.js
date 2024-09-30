@@ -27,13 +27,13 @@ age = prompt('How old are you?')
 
 if ( age < 18 ){
     your_ticket = kilometres * under_18
-    messagge = `You are under 18, so your ticket will cost ${your_ticket.toFixed(2)}`
+    messagge = `You have ${age} years old, so you are under 18 and your will to travel ${kilometres} kilometres.Your Ticket will cost ${your_ticket.toFixed(2)}`
 } else if ( age >= 18 && age <= 65 ){
     your_ticket = kilometres * price_at_kilometres
-    messagge = `Your ticket will cost ${your_ticket.toFixed(2)}`
+        messagge = `You have ${age} years old and your will to travel ${kilometres} kilometres.Your Ticket will cost ${your_ticket.toFixed(2)}`
 }else{
     your_ticket = kilometres * over_65
-    messagge = `You are over 65, so your ticket will cost ${your_ticket.toFixed(2)}`
+    messagge = `You have ${age} years old, so you are over 65 and your will to travel ${kilometres} kilometres.Your Ticket will cost ${your_ticket.toFixed(2)}`
 }
 console.log(messagge);
 
