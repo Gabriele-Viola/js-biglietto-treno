@@ -12,8 +12,8 @@
 let kilometres;
 let age;
 const price_at_kilometres = 0.21;
-let under_18 = price_at_kilometres * 20 / 100;
-let over_65 = price_at_kilometres * 40 / 100;
+let under_18 = price_at_kilometres * 80 / 100;
+let over_65 = price_at_kilometres * 60 / 100;
 let your_ticket;
 let messagge;
 
@@ -27,10 +27,13 @@ age = prompt('How old are you?')
 
 if ( age < 18 ){
     your_ticket = kilometres * under_18
-} else if ( age >= 18 && age < 65 ){
+    messagge = `You are under 18, so your ticket will cost ${your_ticket.toFixed(2)}`
+} else if ( age >= 18 && age <= 65 ){
     your_ticket = kilometres * price_at_kilometres
+    messagge = `Your ticket will cost ${your_ticket.toFixed(2)}`
 }else{
     your_ticket = kilometres * over_65
+    messagge = `You are over 65, so your ticket will cost ${your_ticket.toFixed(2)}`
 }
-console.log(your_ticket.toFixed(2));
+console.log(messagge);
 
