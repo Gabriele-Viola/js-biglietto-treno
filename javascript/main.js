@@ -19,16 +19,15 @@ let messagge;
 
 //Raccogliere dati
 
-kilometres = prompt('How many kilometres do you want to travel?');
-age = prompt('How old are you?')
-// let sum = parseFloat (kilometres) + parseInt(age);
+kilometres = Number(prompt('How many kilometres do you want to travel?'));
+age = Number(prompt('How old are you?'));
 
 // elaborazione dati
 
 if ( age < 18 ){
     your_ticket = kilometres * under_18
     messagge = `You have ${age} years old, so you are under 18 and your will to travel ${kilometres} kilometres.Your Ticket will cost ${your_ticket.toFixed(2)}`
-} else if ( age >= 18 && age <= 65 ){
+} else if ( age >= 18 && age < 65 ){
     your_ticket = kilometres * price_at_kilometres
         messagge = `You have ${age} years old and your will to travel ${kilometres} kilometres.Your Ticket will cost ${your_ticket.toFixed(2)}`
 }else{
@@ -36,4 +35,6 @@ if ( age < 18 ){
     messagge = `You have ${age} years old, so you are over 65 and your will to travel ${kilometres} kilometres.Your Ticket will cost ${your_ticket.toFixed(2)}`
 }
 console.log(messagge);
+
+
 
