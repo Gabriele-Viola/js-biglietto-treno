@@ -12,13 +12,25 @@
 let kilometres;
 let age;
 const price_at_kilometres = 0.21;
-let under_18 ;
-let over_65 ;
+let under_18 = price_at_kilometres * 20 / 100;
+let over_65 = price_at_kilometres * 40 / 100;
+let your_ticket;
+let messagge;
 
 //Raccogliere dati
 
 kilometres = prompt('How many kilometres do you want to travel?');
 age = prompt('How old are you?')
-// let sum = parseFloat (kilometres) + parseFloat(age);
+// let sum = parseFloat (kilometres) + parseInt(age);
 
+// elaborazione dati
+
+if ( age < 18 ){
+    your_ticket = kilometres * under_18
+} else if ( age >= 18 && age < 65 ){
+    your_ticket = kilometres * price_at_kilometres
+}else{
+    your_ticket = kilometres * over_65
+}
+console.log(your_ticket.toFixed(2));
 
